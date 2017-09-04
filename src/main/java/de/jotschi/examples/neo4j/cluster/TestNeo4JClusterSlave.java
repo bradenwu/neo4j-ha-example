@@ -26,7 +26,7 @@ public class TestNeo4JClusterSlave extends AbstractNeo4jCluster {
 		builder.setConfig(HaSettings.ha_server, "localhost:6002");
 		builder.setConfig(ClusterSettings.cluster_server, "localhost:5002");
 		builder.setConfig(HaSettings.slave_only, Settings.TRUE);
-		builder.setConfig(ClusterSettings.initial_hosts, "localhost:5001,localhost:5002");
+		builder.setConfig(ClusterSettings.initial_hosts, "localhost:5001,localhost:5002,localhost:5003");
 
 		graphDb = builder.newGraphDatabase();
 		engine = new ExecutionEngine(graphDb);
